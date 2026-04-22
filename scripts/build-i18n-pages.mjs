@@ -1619,14 +1619,9 @@ const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
 ${locales
   .map((locale) => {
-    const alternates = locales
-      .map((item) => `    <xhtml:link rel="alternate" hreflang="${item.code}" href="${pageUrl(item)}" />`)
-      .join("\n");
     return `  <url>
     <loc>${pageUrl(locale)}</loc>
-${alternates}
-    <xhtml:link rel="alternate" hreflang="x-default" href="${publicBase}/" />
-    <lastmod>2026-04-22</lastmod>
+    <lastmod>2026-04-22T15:50:35.559Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>${locale.code === "en" ? "1.0" : "0.9"}</priority>
   </url>`;
