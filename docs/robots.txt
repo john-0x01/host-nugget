@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://john-0x01.github.io/host-nugget/sitemap.xml
